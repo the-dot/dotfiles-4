@@ -35,6 +35,9 @@ font pango:Monospace 4
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+floating_minimum_size 150 x 150
+floating_maximum_size 2500 x 1500
+
 # start a terminal
 bindsym $mod+Return exec $term
 
@@ -73,6 +76,7 @@ for_window [class="VirtualBox"] floating enable
 for_window [class="vlc"] floating enable
 for_window [class="Wine"] floating enable
 for_window [class="Wireshark"] floating enable
+for_window [class="zoom"] floating enable
 
 # lock screen
 bindsym $mod+l exec $lockcmd -c 111111
@@ -213,7 +217,7 @@ bindsym $mod+r mode "resize"
 
 # i3status bar config
 bar {
-	font pango:monospace 4
+	font pango:monospace 3
 	status_command $barcmd --config ~/.i3/status.conf
 }
 
